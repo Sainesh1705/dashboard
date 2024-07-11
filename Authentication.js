@@ -1,0 +1,52 @@
+// import React, { useState } from 'react';
+
+// const Authentication = ({ onLogin }) => {
+//   const [username, setUsername] = useState('');
+//   const [password, setPassword] = useState('');
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     // Simple authentication logic
+//     if (username === 'user' && password === 'password') {
+//       onLogin(true);
+//     } else {
+//       alert('Invalid credentials');
+//     }
+//   };
+
+//   return (
+//     <form onSubmit={handleSubmit}>
+//       <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+//       <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+//       <button type="submit">Login</button>
+//     </form>
+//   );
+// };
+
+// export default Authentication;
+import React, { useState } from 'react';
+
+const Authentication = ({ onLogin }) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Simple authentication logic
+    if (username === 'user' && password === 'password') {
+      onLogin(true);
+    } else {
+      alert('Invalid credentials');
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+      <button type="submit">Login</button>
+    </form>
+  );
+};
+
+export default Authentication;
